@@ -45,7 +45,7 @@ class VKAccessToken(params: Map<String, String?>) {
     val phone: String?
     val phoneAccessKey: String?
     private val httpsRequired: Boolean
-    private val expirationDate: Long
+    val expirationDate: Long
 
     val isValid: Boolean
         get() = expirationDate <= 0 || created + expirationDate * 1000 > System.currentTimeMillis()
